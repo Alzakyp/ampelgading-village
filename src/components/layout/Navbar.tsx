@@ -20,9 +20,9 @@ export default function Navbar() {
     >
       <Container className="py-4">
         <nav className="flex items-center justify-between">
-          <a href="#" className="inline-flex items-center" aria-label="Ampelgading home">
+          <a href="/" className="inline-flex items-center" aria-label="Ampelgading home">
             {brandAssets.headerLogo ? (
-              <img src={brandAssets.headerLogo} alt="Ampelgading logo" className="h-8 w-auto" />
+              <img src={brandAssets.headerLogo} alt="Ampelgading logo" className="h-auto w-[140px]" />
             ) : (
               <span className="font-editorial text-3xl font-semibold text-[#4f602c]">Ampelgading</span>
             )}

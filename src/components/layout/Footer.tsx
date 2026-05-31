@@ -4,7 +4,7 @@ import Container from '../ui/Container';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="relative overflow-hidden bg-[#df7e3a] py-14 text-[#f5ebc7]">
+    <footer id="contact" className="relative overflow-hidden bg-[#E57B32] py-14 text-[#F5EBC7]">
       {decorations.organicFooter ? (
         <img
           src={decorations.organicFooter}
@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             {brandAssets.footerLogo ? (
-              <img src={brandAssets.footerLogo} alt="Ampelgading logo" className="h-10 w-auto" />
+              <img src={brandAssets.footerLogo} alt="Ampelgading logo" className="h-auto w-[150px]" />
             ) : (
               <p className="font-editorial text-3xl font-semibold">Ampelgading</p>
             )}

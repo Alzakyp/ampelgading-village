@@ -5,7 +5,10 @@ const imageAssets = import.meta.glob('../assets/images/*.{png,jpg,jpeg,webp}', {
   import: 'default',
 }) as Record<string, string>;
 const iconAssets = import.meta.glob('../assets/icons/*.svg', { eager: true, import: 'default' }) as Record<string, string>;
-const logoAssets = import.meta.glob('../assets/logos/*.svg', { eager: true, import: 'default' }) as Record<string, string>;
+const logoAssets = import.meta.glob('../assets/logos/*.{svg,png,jpg,jpeg,webp}', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
 const decorationAssets = import.meta.glob('../assets/decorations/*.svg', {
   eager: true,
   import: 'default',
@@ -20,10 +23,10 @@ const getAsset = (assets: Record<string, string>, preferred: string[], fallback?
 };
 
 export const navItems: NavItem[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Gastronomy', href: '#gastronomy' },
-  { label: 'Culture', href: '#culture' },
+  { label: 'About', href: '/#about' },
+  { label: 'Experience', href: '/experience' },
+  { label: 'Gastronomy', href: '/gastronomy' },
+  { label: 'Culture', href: '/culture' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -36,8 +39,11 @@ export const heroData = {
 };
 
 export const brandAssets = {
-  headerLogo: getAsset(logoAssets, ['ampelgading-logo-header.svg']),
-  footerLogo: getAsset(logoAssets, ['ampelgading-logo-footer.svg'], getAsset(logoAssets, ['ampelgading-logo.svg'])),
+  headerLogo: getAsset(logoAssets, ['ampelgading-logo.png', 'ampelgading-logo-header.svg', 'ampelgading-logo.svg']),
+  footerLogo: getAsset(
+    logoAssets,
+    ['ampelgading-logo-white.png', 'ampelgading-logo-footer.svg', 'ampelgading-logo.png', 'ampelgading-logo.svg'],
+  ),
 };
 
 export const iconAssetsMap = {
