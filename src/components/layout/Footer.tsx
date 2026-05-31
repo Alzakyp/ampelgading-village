@@ -3,6 +3,8 @@ import Button from '../ui/Button';
 import Container from '../ui/Container';
 
 export default function Footer() {
+  const footerLogoNeedsLightFilter = brandAssets.footerLogo ? !brandAssets.footerLogo.toLowerCase().includes('white') : false;
+
   return (
     <footer id="contact" className="relative overflow-hidden bg-[#E57B32] py-14 text-[#F5EBC7]">
       {decorations.organicFooter ? (
@@ -17,7 +19,11 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             {brandAssets.footerLogo ? (
-              <img src={brandAssets.footerLogo} alt="Ampelgading logo" className="h-auto w-[150px]" />
+              <img
+                src={brandAssets.footerLogo}
+                alt="Ampelgading logo"
+                className={`h-auto w-[150px] ${footerLogoNeedsLightFilter ? 'brightness-0 invert' : ''}`}
+              />
             ) : (
               <p className="font-editorial text-3xl font-semibold">Ampelgading</p>
             )}
@@ -63,7 +69,9 @@ export default function Footer() {
                 <span>{contactItems[2].label}</span>
               </li>
             </ul>
-            <Button className="mt-6">Discover</Button>
+            <Button href="/experience" className="mt-6">
+              Discover
+            </Button>
           </div>
         </div>
       </Container>

@@ -27,7 +27,7 @@ export const navItems: NavItem[] = [
   { label: 'Experience', href: '/experience' },
   { label: 'Gastronomy', href: '/gastronomy' },
   { label: 'Culture', href: '/culture' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const heroFallback = getAsset(imageAssets, ['hero-ampelgading.jpg']);
