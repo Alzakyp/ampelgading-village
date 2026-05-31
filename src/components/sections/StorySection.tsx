@@ -4,7 +4,7 @@ import img0379Asset from '../../assets/images/img-0379.png';
 import img0405Asset from '../../assets/images/img-0405.png';
 import imgggAsset from '../../assets/images/imggg.png';
 import img0274Asset from '../../assets/images/img-0274.png';
-import img0460Asset from '../../assets/images/img-0460.png';
+import img0423Asset from '../../assets/images/img-0423.png';
 
 const getImage = (id: string) => storyImages.find((item) => item.id === id)?.src;
 const imageAssets = import.meta.glob('../../assets/images/*.{png,jpg,jpeg,webp}', {
@@ -25,7 +25,7 @@ const imageHandPicking =
 const imageActivity = img0405Asset;
 const imageFoodServing = imgggAsset;
 const imageCommunal = img0274Asset;
-const imagePlatter = img0460Asset;
+const imagePlatter = img0423Asset;
 
 export default function StorySection() {
   return (
@@ -124,88 +124,38 @@ export default function StorySection() {
             </p>
           </div>
 
-          <div className="xl:hidden">
-            <div className="grid gap-7 md:grid-cols-2">
-              {imageActivity ? (
-                <figure className="group overflow-hidden md:mx-auto md:w-[420px]">
-                  <img
-                    src={imageActivity}
-                    alt="Village activity scene with goat"
-                    className="h-[340px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[420px]"
-                  />
-                </figure>
-              ) : null}
-              <p className="max-w-[560px] text-[18px] leading-[1.52] text-[#4f602c]">{storyParagraphs[2].text}</p>
-              {imageFoodServing ? (
-                <figure className="group overflow-hidden md:ml-auto md:w-[380px]">
-                  <img
-                    src={imageFoodServing}
-                    alt="Traditional food serving plate"
-                    className="h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[320px]"
-                  />
-                </figure>
-              ) : null}
-              {imageCommunal ? (
-                <figure className="group overflow-hidden md:w-[430px]">
-                  <img
-                    src={imageCommunal}
-                    alt="Communal dining in greenhouse setting"
-                    className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[430px]"
-                  />
-                </figure>
-              ) : null}
-              {imagePlatter ? (
-                <figure className="group overflow-hidden md:mx-auto md:w-[330px]">
-                  <img
-                    src={imagePlatter}
-                    alt="Tumpeng and food platter"
-                    className="h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[330px]"
-                  />
-                </figure>
-              ) : null}
-            </div>
-          </div>
-
-          <div className="relative hidden h-[1220px] xl:block">
-            {imageActivity ? (
-              <figure className="group absolute left-1/2 top-0 w-[420px] -translate-x-1/2 overflow-hidden">
-                <img
-                  src={imageActivity}
-                  alt="Village activity scene with goat"
-                  className="h-[420px] w-[420px] object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </figure>
-            ) : null}
-            <p className="absolute left-0 top-[420px] w-[560px] text-[20px] leading-[1.5] text-[#4f602c]">
+          <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-y-8 pt-10 pb-[100px] md:gap-y-10 xl:grid-cols-12 xl:items-start xl:gap-x-8 xl:gap-y-16">
+            <figure className="group overflow-hidden xl:col-span-5 xl:col-start-5">
+              <img
+                src={imageActivity}
+                alt="Ampelgading village activity"
+                className="h-[340px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[380px]"
+              />
+            </figure>
+            <p className="max-w-[620px] text-[18px] leading-[1.52] text-[#4f602c] xl:col-span-6 xl:col-start-1 xl:text-[20px]">
               {storyParagraphs[2].text}
             </p>
-            {imageFoodServing ? (
-              <figure className="group absolute right-0 top-[430px] w-[380px] overflow-hidden">
-                <img
-                  src={imageFoodServing}
-                  alt="Traditional food serving plate"
-                  className="h-[320px] w-[380px] object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </figure>
-            ) : null}
-            {imageCommunal ? (
-              <figure className="group absolute left-0 top-[760px] w-[430px] overflow-hidden">
-                <img
-                  src={imageCommunal}
-                  alt="Communal dining in greenhouse setting"
-                  className="h-[430px] w-[430px] object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </figure>
-            ) : null}
-            {imagePlatter ? (
-              <figure className="group absolute left-[55%] top-[820px] w-[330px] overflow-hidden">
-                <img
-                  src={imagePlatter}
-                  alt="Tumpeng and food platter"
-                  className="h-[330px] w-[330px] object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </figure>
-            ) : null}
+            <figure className="group overflow-hidden xl:col-span-3 xl:col-start-10">
+              <img
+                src={imageFoodServing}
+                alt="Traditional food tasting"
+                className="h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+              />
+            </figure>
+            <figure className="group overflow-hidden xl:col-span-5 xl:col-start-1">
+              <img
+                src={imageCommunal}
+                alt="Communal dining experience"
+                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[440px]"
+              />
+            </figure>
+            <figure className="group overflow-hidden xl:col-span-4 xl:col-start-7">
+              <img
+                src={imagePlatter}
+                alt="Nasi kuning traditional dish"
+                className="h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[360px]"
+              />
+            </figure>
           </div>
 
           <p className="mx-auto max-w-[760px] text-center text-[18px] leading-[1.55] text-[#4f602c] xl:text-[20px]">
