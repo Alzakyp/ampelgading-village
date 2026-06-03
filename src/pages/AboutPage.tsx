@@ -19,9 +19,9 @@ export default function AboutPage() {
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-[#404C22]/58" />
-          <div className="relative z-10 mx-auto max-w-[980px] px-5 pt-16 text-[#FFFFFF]">
-            <p className="font-earthtone text-[32px] leading-none font-light sm:text-[40px] lg:text-[48px]">Ampelgading</p>
-            <h1 className="font-earthtone mt-4 text-[46px] leading-[0.98] font-bold sm:text-[70px] lg:text-[96px]">
+          <div className="relative z-10 mx-auto max-w-[980px] px-5 pt-16 text-[#F5EBC7]">
+            <p className="font-earthtone text-[32px] leading-none font-[400] text-[#F5EBC7] sm:text-[40px] lg:text-[48px]">Ampelgading</p>
+            <h1 className="font-earthtone mt-4 text-[46px] leading-[0.98] font-bold text-[#F5EBC7] sm:text-[70px] lg:text-[96px]">
               Experience the Journey
             </h1>
           </div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 className="h-[460px] w-full object-cover object-center sm:h-[600px] lg:h-full"
               />
               <article className="flex min-h-[600px] flex-col justify-center bg-[#8F8D43] px-7 py-14 text-[#F5EBC7] sm:px-10 lg:px-20 xl:px-28">
-                <h2 className="font-earthtone text-[46px] leading-[1.02] font-bold sm:text-[58px] lg:text-[68px]">
+                <h2 className="font-earthtone text-[23px] leading-[1.02] font-normal text-[#F5EBC7] sm:text-[29px] lg:text-[34px]">
                   Ampelgading
                   <br />
                   Tourism Village
@@ -82,17 +82,17 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-[#F5EBC7] px-5 py-28 sm:px-8 lg:px-10 lg:py-36">
+        <section className="bg-[#F5EBC7] px-5 pt-16 pb-32 sm:px-8 lg:px-10 lg:pt-20 lg:pb-40">
           <div className="mx-auto grid max-w-[1080px] gap-10 text-center text-[#8F8D43] sm:grid-cols-3 sm:gap-8">
             {steps.map((step) => (
-              <p key={step} className="font-editorial text-[52px] leading-none font-medium sm:text-[56px] lg:text-[72px]">
+              <p key={step} className="font-editorial text-[36px] leading-none font-medium sm:text-[40px] lg:text-[50px]">
                 {step}
               </p>
             ))}
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-[#8F8D43] px-5 py-20 text-center text-[#F5EBC7] sm:px-8 lg:px-10 lg:py-24">
+        <section className="relative overflow-hidden bg-[#8F8D43] px-5 py-18 text-center text-[#F5EBC7] sm:px-8 lg:px-10 lg:py-20">
           <img
             src={paperTexture}
             alt=""
@@ -100,7 +100,7 @@ export default function AboutPage() {
             className="pointer-events-none absolute inset-0 h-full w-full object-cover mix-blend-multiply opacity-55"
           />
           <div className="relative z-10 mx-auto max-w-[1380px]">
-            <h2 className="font-editorial whitespace-nowrap text-[40px] leading-[1.03] font-medium min-[420px]:text-[48px] sm:text-[76px] lg:text-[92px] xl:text-[104px]">
+            <h2 className="font-editorial whitespace-nowrap text-[28px] leading-[1.03] font-medium min-[420px]:text-[34px] sm:text-[54px] lg:text-[64px] xl:text-[72px]">
               #Experience <span className="font-normal italic">the</span>
               Journey
             </h2>
