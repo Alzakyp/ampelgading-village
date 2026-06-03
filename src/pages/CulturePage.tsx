@@ -53,7 +53,7 @@ function CultureFeature({ title, text, images, alt }: CultureFeatureProps) {
           ))}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#242D17]/62 via-[#242D17]/16 to-transparent" />
-        <h2 className="font-editorial absolute bottom-8 left-6 text-[42px] leading-none font-medium text-[#FFFFFF] md:bottom-10 md:left-10 md:text-[54px] lg:bottom-14 lg:left-14 lg:text-[64px]">
+        <h2 className="font-editorial absolute bottom-8 left-6 text-[42px] leading-none font-medium text-[#F5EBC7] md:bottom-10 md:left-10 md:text-[54px] lg:bottom-14 lg:left-14 lg:text-[64px]">
           {title}
         </h2>
         {totalSlides > 1 ? (
@@ -61,7 +61,7 @@ function CultureFeature({ title, text, images, alt }: CultureFeatureProps) {
             {images.map((_, index) => (
               <span
                 key={`${title}-dot-${index}`}
-                className={`h-1.5 rounded-full transition-all ${index === activeSlide ? 'w-6 bg-[#FFFFFF]' : 'w-2 bg-[#FFFFFF]/55'}`}
+                className={`h-1.5 rounded-full transition-all ${index === activeSlide ? 'w-6 bg-[#F5EBC7]' : 'w-2 bg-[#F5EBC7]/55'}`}
               />
             ))}
           </div>
@@ -82,9 +82,9 @@ export default function CulturePage() {
         <section className="relative flex h-[480px] items-center justify-center overflow-hidden text-center lg:h-[700px]">
           <img src={heroCulture} alt="Ampelgading cultural tradition" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-[#242D17]/58" />
-          <div className="relative z-10 mx-auto max-w-[980px] px-5 text-[#FFFFFF]">
-            <p className="font-editorial text-[28px] font-semibold md:text-[34px]">Living Culture</p>
-            <h1 className="font-editorial mt-5 text-[38px] leading-[1.15] font-medium md:text-[48px] lg:text-[56px]">
+          <div className="relative z-10 mx-auto max-w-[980px] px-5 text-[#F5EBC7]">
+            <p className="font-earthtone text-[28px] font-[400] md:text-[34px]">Living Culture</p>
+            <h1 className="font-earthtone mt-5 text-[38px] leading-[1.15] font-bold md:text-[48px] lg:text-[56px]">
               Experience culture through tradition
             </h1>
           </div>
