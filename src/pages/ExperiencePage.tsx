@@ -43,9 +43,9 @@ export default function ExperiencePage() {
         <section className="relative flex h-[520px] items-center justify-center overflow-hidden text-center sm:h-[620px] lg:h-[723px]">
           <img src={heroExperience} alt="Tourists exploring Ampelgading experience" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-[#242D17]/58" />
-          <div className="relative z-10 mx-auto max-w-[1100px] px-5 text-[#FFFFFF]">
-            <p className="font-earthtone text-[28px] font-[400] sm:text-[32px] lg:text-[36px]">Explore Ampelgading</p>
-            <h1 className="font-earthtone mt-5 text-[42px] leading-[1.08] font-bold sm:text-[64px] lg:text-[92px]">
+          <div className="relative z-10 mx-auto max-w-[1100px] px-5 text-[#F5EBC7]">
+            <p className="font-earthtone text-[28px] font-[400] text-[#F5EBC7] sm:text-[32px] lg:text-[36px]">Explore Ampelgading</p>
+            <h1 className="font-earthtone mt-5 text-[42px] leading-[1.08] font-bold text-[#F5EBC7] sm:text-[64px] lg:text-[92px]">
               Where Nature Meets
               <br />
               Local Life
