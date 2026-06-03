@@ -7,6 +7,13 @@ import cocoaGardenExperience from '../assets/images/cocoa-garden-experience.png'
 import snakefruitGardenExperience from '../assets/images/snakefruit-garden-experience.png';
 import cloveDistillationExperience from '../assets/images/clove-distillation-experience.png';
 import tumpangExperience from '../assets/images/tumpang-experience.png';
+import coffeeGardenSlide1 from '../assets/images/experience/coffee-garden-1.png';
+import coffeeGardenSlide2 from '../assets/images/experience/coffee-garden-2.png';
+import coffeeGardenSlide3 from '../assets/images/experience/coffee-garden-3.png';
+import coffeeGardenSlide4 from '../assets/images/experience/coffee-garden-4.png';
+import coffeeGardenSlide5 from '../assets/images/experience/coffee-garden-5.png';
+import group704Icon from '../assets/images/experience/group-704.png';
+import coffeeGardenHero from '../assets/images/experience/img-0373-hero-coffee.png';
 
 import coffeeGardenIcon from '../assets/icons/coffee-garden-icon.png';
 import cocoaGardenIcon from '../assets/icons/cocoa-garden-icon.png';
@@ -21,10 +28,10 @@ const processItems = [
 ];
 
 const experienceCards = [
-  { label: 'Coffee Garden', image: coffeeGardenExperience, alt: 'Coffee garden activity in Ampelgading' },
-  { label: 'Cocoa Garden', image: cocoaGardenExperience, alt: 'Cocoa garden harvest in Ampelgading' },
-  { label: 'Snakefruit Garden', image: snakefruitGardenExperience, alt: 'Visitors walking through a snakefruit garden' },
-  { label: 'Clove Distilation', image: cloveDistillationExperience, alt: 'Clove distillation process in Ampelgading' },
+  { label: 'Coffee Garden', image: coffeeGardenExperience, alt: 'Coffee garden activity in Ampelgading', href: '/experience/coffee-garden' },
+  { label: 'Cocoa Garden', image: cocoaGardenExperience, alt: 'Cocoa garden harvest in Ampelgading', href: '/experience/cocoa-garden' },
+  { label: 'Snakefruit Garden', image: snakefruitGardenExperience, alt: 'Visitors walking through a snakefruit garden', href: '/experience/snakefruit-garden' },
+  { label: 'Clove Distilation', image: cloveDistillationExperience, alt: 'Clove distillation process in Ampelgading', href: '/experience/clove-distillation' },
 ];
 
 const traditionItems = [
@@ -33,6 +40,14 @@ const traditionItems = [
   'Ketupat & Coconut Leaf Craft',
   'Traditional coffee roaster',
   'Drink Coffee in the Garden',
+];
+
+const coffeeGardenSlides = [
+  coffeeGardenSlide1,
+  coffeeGardenSlide2,
+  coffeeGardenSlide3,
+  coffeeGardenSlide4,
+  coffeeGardenSlide5,
 ];
 
 export default function ExperiencePage() {
@@ -67,11 +82,57 @@ export default function ExperiencePage() {
             <div className="mt-16 grid gap-8 lg:grid-cols-2">
               {experienceCards.map((card) => (
                 <article key={card.label} className="bg-[#8F8D43]">
-                  <img src={card.image} alt={card.alt} className="h-[360px] w-full object-cover md:h-[440px] lg:h-[520px]" />
-                  <div className="px-7 py-5 text-center text-lg font-medium text-[#FFFFFF]">{card.label}</div>
+                  {card.href ? (
+                    <a href={card.href} className="block cursor-pointer no-underline">
+                      <img src={card.image} alt={card.alt} className="h-[360px] w-full object-cover md:h-[440px] lg:h-[520px]" />
+                      <div className="px-7 py-5 text-center text-lg font-medium text-[#FFFFFF]">{card.label}</div>
+                    </a>
+                  ) : (
+                    <>
+                      <img src={card.image} alt={card.alt} className="h-[360px] w-full object-cover md:h-[440px] lg:h-[520px]" />
+                      <div className="px-7 py-5 text-center text-lg font-medium text-[#FFFFFF]">{card.label}</div>
+                    </>
+                  )}
                 </article>
               ))}
             </div>
+
+            <section className="mt-20 bg-[#F5EBC7]">
+              <div className="relative mb-14 h-[460px] overflow-hidden sm:h-[560px] lg:h-[720px]">
+                <img src={coffeeGardenHero} alt="Coffee Garden hero background" className="h-full w-full object-cover object-center" />
+                <div className="absolute inset-0 bg-[#242D17]/45" />
+                <h3 className="font-editorial absolute bottom-8 left-1/2 -translate-x-1/2 text-center text-[40px] leading-none font-medium text-[#FFFFFF] sm:text-[52px] lg:bottom-12 lg:text-[64px]">
+                  Coffee Garden
+                </h3>
+              </div>
+
+              <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.45fr)] lg:items-start">
+                <div>
+                  <img src={group704Icon} alt="Coffee Garden decoration icon" className="h-auto w-[118px] object-contain md:w-[132px]" />
+                  <h3 className="font-editorial mt-7 text-[34px] leading-tight font-medium text-[#685A31] md:text-[42px] lg:text-[48px]">
+                    Coffee Garden
+                  </h3>
+                  <p className="mt-5 max-w-[520px] text-[16px] leading-[1.7] text-[#4F602C] md:text-[18px]">
+                    Walk through Ampelgading&apos;s coffee garden and experience the growing process directly from the land. Visitors can
+                    observe cultivation activities, interact with local farmers, and feel the atmosphere that shapes the village&apos;s
+                    coffee tradition.
+                  </p>
+                </div>
+
+                <div className="overflow-x-auto pb-3">
+                  <div className="flex w-max gap-6 pr-6">
+                    {coffeeGardenSlides.map((image, index) => (
+                      <img
+                        key={`coffee-garden-slide-${index + 1}`}
+                        src={image}
+                        alt={`Coffee Garden photo ${index + 1}`}
+                        className={`shrink-0 object-cover ${index === 0 ? 'w-[260px] md:w-[300px] lg:w-[320px]' : 'w-[240px] md:w-[280px] lg:w-[300px]'} h-[340px] md:h-[460px] lg:h-[500px]`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
 

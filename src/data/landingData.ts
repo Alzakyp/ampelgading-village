@@ -9,7 +9,7 @@ const logoAssets = import.meta.glob('../assets/logos/*.{svg,png,jpg,jpeg,webp}',
   eager: true,
   import: 'default',
 }) as Record<string, string>;
-const decorationAssets = import.meta.glob('../assets/decorations/*.svg', {
+const decorationAssets = import.meta.glob('../assets/decorations/*.{svg,png,jpg,jpeg,webp}', {
   eager: true,
   import: 'default',
 }) as Record<string, string>;
@@ -23,7 +23,7 @@ const getAsset = (assets: Record<string, string>, preferred: string[], fallback?
 };
 
 export const navItems: NavItem[] = [
-  { label: 'About', href: '/#about' },
+  { label: 'About', href: '/about' },
   { label: 'Experience', href: '/experience' },
   { label: 'Gastronomy', href: '/gastronomy' },
   { label: 'Culture', href: '/culture' },
@@ -55,12 +55,12 @@ export const iconAssetsMap = {
 };
 
 export const decorations = {
-  organicLarge: getAsset(decorationAssets, ['organic-lines-large.svg']),
-  organicFooter: getAsset(decorationAssets, ['organic-lines-footer.svg']),
-  group727: getAsset(decorationAssets, ['group-727.svg']),
-  vectorDecor: getAsset(decorationAssets, ['vector-decor.svg']),
-  ranting: getAsset(decorationAssets, ['ranting.svg', 'organic-lines-large.svg']),
-  daun: getAsset(decorationAssets, ['daun.svg', 'vector-decor.svg']),
+  organicLarge: getAsset(decorationAssets, ['organic-lines-large.svg', 'farmer-decoration.png']),
+  organicFooter: getAsset(decorationAssets, ['organic-lines-footer.svg', 'tumpengan-decoration.png']),
+  group727: getAsset(decorationAssets, ['group-727.png', 'group-727.svg']),
+  vectorDecor: getAsset(decorationAssets, ['vector-1.png', 'vector-decor.svg']),
+  ranting: getAsset(decorationAssets, ['ranting.svg', 'traditional-coffee-roaster-decoration.png']),
+  daun: getAsset(decorationAssets, ['daun.svg', 'vector-1.png', 'vector-decor.svg']),
 };
 
 export const storyParagraphs: StoryParagraph[] = [

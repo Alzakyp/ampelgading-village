@@ -1,4 +1,5 @@
 import { storyImages, storyParagraphs } from '../../data/landingData';
+import { decorations } from '../../data/landingData';
 import image3Asset from '../../assets/images/image-3.png';
 import img0379Asset from '../../assets/images/img-0379.png';
 import img0405Asset from '../../assets/images/img-0405.png';
@@ -29,138 +30,82 @@ const imagePlatter = img0423Asset;
 
 export default function StorySection() {
   return (
-    <section id="about" className="relative overflow-hidden bg-[#f5ebc7] pb-[120px] pt-[96px] text-[#4f602c] lg:pt-[108px]">
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute left-[11%] top-[10%] z-0 hidden w-[80%] opacity-[0.2] lg:block"
-        viewBox="0 0 1200 220"
-        fill="none"
-      >
-        <path d="M20 170C210 30 420 30 610 140C780 240 980 220 1180 60" stroke="#C1B07C" strokeWidth="2" />
-        <path d="M80 200C260 90 420 100 560 170" stroke="#C1B07C" strokeWidth="1.5" />
-      </svg>
+    <section id="about" className="about-page relative overflow-hidden bg-[#f5ebc7] pb-[120px] pt-[96px] text-[#4f602c] lg:pt-[108px]">
+      {decorations.vectorDecor ? (
+        <img
+          src={decorations.vectorDecor}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute right-[-48px] top-[140px] z-[1] hidden w-[316px] rotate-180 opacity-95 lg:block"
+        />
+      ) : null}
 
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute right-[1%] top-[10%] z-[1] hidden w-[300px] -scale-x-100 opacity-85 lg:block"
-        viewBox="0 0 300 300"
-        fill="none"
-      >
-        <path d="M240 26C210 30 170 56 138 98C98 150 90 222 112 272C166 246 212 208 242 162C272 118 278 72 240 26Z" fill="#8F8D43" />
-        <path d="M129 260C133 202 160 130 220 62" stroke="#f5ebc7" strokeOpacity="0.35" strokeWidth="3" />
-      </svg>
+      {decorations.group727 ? (
+        <img
+          src={decorations.group727}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-[300px] right-[24px] z-[1] hidden w-[336px] opacity-90 lg:block"
+        />
+      ) : null}
 
-      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-10">
-        <div className="space-y-12 lg:space-y-14">
-          <div className="xl:hidden">
-            <div className="grid gap-7 md:grid-cols-2">
-              {imageTopCenter ? (
-                <figure className="group overflow-hidden md:col-span-1 md:w-[320px]">
-                  <img
-                    src={imageTopCenter}
-                    alt="Farmer harvesting produce in Ampelgading"
-                    className="h-[320px] w-full object-cover object-center transition duration-500 group-hover:scale-[1.02]"
-                  />
-                </figure>
-              ) : null}
-              <p className="text-[18px] leading-[1.52] text-[#4f602c] md:self-end">{storyParagraphs[0].text}</p>
-              {imageCoffeeLarge ? (
-                <figure className="group overflow-hidden md:w-[500px]">
-                  <img
-                    src={imageCoffeeLarge}
-                    alt="Coffee beans and local harvest"
-                    className="h-[420px] w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                  />
-                </figure>
-              ) : null}
-              <div className="space-y-6">
-                {imageHandPicking ? (
-                  <figure className="group overflow-hidden md:ml-auto md:w-[300px]">
-                    <img
-                      src={imageHandPicking}
-                      alt="Hands picking harvest in plantation"
-                      className="h-[280px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[300px]"
-                    />
-                  </figure>
-                ) : null}
-                <p className="max-w-[600px] text-[18px] leading-[1.52] text-[#4f602c]">{storyParagraphs[1].text}</p>
-              </div>
-            </div>
+      <div className="about-collage relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-10">
+        <div className="lg:hidden">
+          <div className="space-y-6">
+            {imageTopCenter ? <img src={imageTopCenter} alt="Farmer harvesting produce in Ampelgading" className="h-[300px] w-full object-cover" /> : null}
+            <p className="text-[16px] leading-[1.55] text-[#8F8D43]">{storyParagraphs[0].text}</p>
+            {imageCoffeeLarge ? <img src={imageCoffeeLarge} alt="Coffee beans and local harvest" className="h-[340px] w-full object-cover" /> : null}
+            {imageHandPicking ? <img src={imageHandPicking} alt="Hands picking harvest in plantation" className="h-[280px] w-full object-cover" /> : null}
+            <p className="text-[16px] leading-[1.55] text-[#8F8D43]">{storyParagraphs[1].text}</p>
+            <img src={imageActivity} alt="Ampelgading village activity" className="h-[320px] w-full object-cover" />
+            <p className="text-[16px] leading-[1.55] text-[#8F8D43]">{storyParagraphs[2].text}</p>
+            <img src={imageFoodServing} alt="Traditional food tasting" className="h-[300px] w-full object-cover" />
+            <img src={imageCommunal} alt="Communal dining experience" className="h-[340px] w-full object-cover" />
+            <img src={imagePlatter} alt="Nasi kuning traditional dish" className="h-[300px] w-full object-cover" />
+            <p className="pt-2 text-center text-[16px] leading-[1.6] text-[#8F8D43]">{storyParagraphs[3].text}</p>
           </div>
+        </div>
 
-          <div className="relative hidden h-[1140px] xl:block">
+        <div className="hidden lg:block">
+          <div className="relative mx-auto h-[4500px] max-w-[1440px]">
             {imageTopCenter ? (
-              <figure className="group absolute left-1/2 top-0 w-[320px] -translate-x-1/2 overflow-hidden">
-                <img
-                  src={imageTopCenter}
-                  alt="Farmer harvesting produce in Ampelgading"
-                  className="h-[320px] w-[320px] object-cover object-center transition duration-500 group-hover:scale-[1.02]"
-                />
-              </figure>
+              <img src={imageTopCenter} alt="Farmer harvesting produce in Ampelgading" className="floating-image absolute left-[580px] top-[150px] h-[298px] w-[300px] object-cover" />
             ) : null}
-            <p className="absolute left-0 top-[380px] w-[520px] text-[20px] leading-[1.5] text-[#4f602c]">
+
+            <p className="floating-text absolute left-[52px] top-[430px] w-[636px] text-[22px] leading-[1.25] text-[#8F8D43]">
               {storyParagraphs[0].text}
             </p>
+
             {imageCoffeeLarge ? (
-              <figure className="group absolute left-0 top-[600px] w-[520px] overflow-hidden">
-                <img
-                  src={imageCoffeeLarge}
-                  alt="Coffee beans and local harvest"
-                  className="h-[520px] w-[520px] object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </figure>
+              <img src={imageCoffeeLarge} alt="Coffee beans and local harvest" className="floating-image absolute left-[50px] top-[650px] h-[484px] w-[520px] object-cover" />
             ) : null}
+
             {imageHandPicking ? (
-              <figure className="group absolute right-[170px] top-[440px] w-[300px] overflow-hidden">
-                <img
-                  src={imageHandPicking}
-                  alt="Hands picking harvest in plantation"
-                  className="h-[300px] w-[300px] object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </figure>
+              <img src={imageHandPicking} alt="Hands picking harvest in plantation" className="floating-image absolute left-[893px] top-[700px] h-[298px] w-[300px] object-cover" />
             ) : null}
-            <p className="absolute right-0 top-[780px] w-[600px] text-[20px] leading-[1.5] text-[#4f602c]">
+
+            <p className="floating-text absolute left-[642px] top-[930px] w-[748px] text-[22px] leading-[1.44] text-[#8F8D43]">
               {storyParagraphs[1].text}
             </p>
-          </div>
 
-          <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-y-8 pt-10 pb-[100px] md:gap-y-10 xl:grid-cols-12 xl:items-start xl:gap-x-8 xl:gap-y-16">
-            <figure className="group overflow-hidden xl:col-span-5 xl:col-start-5">
-              <img
-                src={imageActivity}
-                alt="Ampelgading village activity"
-                className="h-[340px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[380px]"
-              />
-            </figure>
-            <p className="max-w-[620px] text-[18px] leading-[1.52] text-[#4f602c] xl:col-span-6 xl:col-start-1 xl:text-[20px]">
+            <img src={imageActivity} alt="Ampelgading village activity" className="floating-image absolute left-[350px] top-[1380px] h-[479px] w-[637px] object-cover" />
+
+            <p className="floating-text absolute left-[50px] top-[1980px] w-[686px] text-[22px] leading-[1.44] text-[#8F8D43]">
               {storyParagraphs[2].text}
             </p>
-            <figure className="group overflow-hidden xl:col-span-3 xl:col-start-10">
-              <img
-                src={imageFoodServing}
-                alt="Traditional food tasting"
-                className="h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-              />
-            </figure>
-            <figure className="group overflow-hidden xl:col-span-5 xl:col-start-1">
-              <img
-                src={imageCommunal}
-                alt="Communal dining experience"
-                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[440px]"
-              />
-            </figure>
-            <figure className="group overflow-hidden xl:col-span-4 xl:col-start-7">
-              <img
-                src={imagePlatter}
-                alt="Nasi kuning traditional dish"
-                className="h-[300px] w-full object-cover transition duration-500 group-hover:scale-[1.02] md:h-[360px]"
-              />
-            </figure>
-          </div>
 
-          <p className="mx-auto max-w-[760px] text-center text-[18px] leading-[1.55] text-[#4f602c] xl:text-[20px]">
-            {storyParagraphs[3].text}
-          </p>
+            <img src={imageFoodServing} alt="Traditional food tasting" className="floating-image absolute left-[1047px] top-[1970px] h-[336px] w-[336px] object-cover" />
+
+            <img src={imageCommunal} alt="Communal dining experience" className="floating-image absolute left-[50px] top-[2500px] h-[426px] w-[426px] object-cover" />
+
+            <img src={imagePlatter} alt="Nasi kuning traditional dish" className="floating-image absolute left-[746px] top-[2550px] h-[300px] w-[300px] object-cover" />
+
+            <img src={imageTopCenter} alt="Local village cooking activity" className="floating-image absolute left-[540px] top-[3150px] h-[393px] w-[360px] object-cover" />
+
+            <p className="floating-text absolute left-[226px] top-[3680px] w-[988px] text-center text-[22px] leading-[1.44] text-[#8F8D43]">
+              {storyParagraphs[3].text}
+            </p>
+          </div>
         </div>
       </div>
 
