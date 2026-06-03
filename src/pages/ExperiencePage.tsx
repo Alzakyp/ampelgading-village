@@ -44,9 +44,11 @@ export default function ExperiencePage() {
           <img src={heroExperience} alt="Tourists exploring Ampelgading experience" className="absolute inset-0 h-full w-full object-cover object-center" />
           <div className="absolute inset-0 bg-[#242D17]/58" />
           <div className="relative z-10 mx-auto max-w-[1100px] px-5 text-[#FFFFFF]">
-            <p className="font-editorial text-[28px] font-semibold sm:text-[32px] lg:text-[36px]">Explore Ampelgading</p>
-            <h1 className="font-editorial mt-5 text-[36px] leading-tight font-medium sm:text-[46px] lg:text-[62px]">
-              Discover places where nature and local living grow together
+            <p className="font-earthtone text-[28px] font-[400] sm:text-[32px] lg:text-[36px]">Explore Ampelgading</p>
+            <h1 className="font-earthtone mt-5 text-[42px] leading-[1.08] font-bold sm:text-[64px] lg:text-[92px]">
+              Where Nature Meets
+              <br />
+              Local Life
             </h1>
           </div>
         </section>
