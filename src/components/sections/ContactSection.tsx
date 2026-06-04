@@ -1,6 +1,7 @@
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 import vectorContact from '../../assets/images/vector-contact.png';
+import instagramIcon from '../../assets/icons/instagram-icon.svg';
 
 const googleMapsUrl = 'https://www.google.com/maps/place/Ampelgading+Tourism+Village/@-8.1952312,112.8345792,17z';
 
@@ -30,6 +31,28 @@ export default function ContactSection() {
         </Container>
       </div>
 
+      <Container className="pb-14 md:pb-16">
+        <div className="max-w-[620px]">
+          <h2 className="font-editorial text-[38px] text-[#8F8D43] md:text-[46px]">Contact us</h2>
+          <div className="mt-6 space-y-4 text-[17px] text-[#8F8D43]">
+            <div className="flex items-start gap-3">
+              <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#925D31] text-[#F5EBC7]">
+                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-current" aria-hidden="true">
+                  <path d="M20.5 3.5a11.2 11.2 0 0 0-17.8 13l-1.6 4.9 5.1-1.6A11.2 11.2 0 1 0 20.5 3.5ZM12 21a9.2 9.2 0 0 1-4.7-1.3l-.3-.2-3 .9.9-2.9-.2-.3A9.2 9.2 0 1 1 12 21Zm5.1-6.8c-.3-.2-1.8-.9-2.1-1s-.5-.2-.8.2-.9 1-1.1 1.2-.4.2-.7 0a7.5 7.5 0 0 1-2.2-1.4 8.5 8.5 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6s-.8-1.9-1.1-2.5c-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.2 1.2 3.4c.1.2 2.2 3.5 5.3 4.8.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4 0-.1-.3-.2-.6-.4Z" />
+                </svg>
+              </span>
+              <p>08123253153 (Heri Mujiono)</p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#925D31] text-[#F5EBC7]">
+                <img src={instagramIcon} alt="" aria-hidden="true" className="h-3.5 w-3.5" />
+              </span>
+              <p>@ampelgading_village</p>
+            </div>
+          </div>
+        </div>
+      </Container>
 
       <div className="w-full">
         <iframe
@@ -51,7 +74,7 @@ export default function ContactSection() {
             href={googleMapsUrl}
             rel="noopener noreferrer"
             target="_blank"
-            className="!bg-[#925D31] px-8 py-3 !text-[#F5EBC7] hover:!bg-[#A5412D]"
+            className="bg-[#925D31] px-8 py-3 text-[#F5EBC7] hover:bg-[#A5412D]"
           >
             Discover
           </Button>
