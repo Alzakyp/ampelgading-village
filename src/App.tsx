@@ -1,10 +1,3 @@
-import Footer from './components/layout/Footer';
-import Navbar from './components/layout/Navbar';
-import ExperienceSection from './components/sections/ExperienceSection';
-import HeroSection from './components/sections/HeroSection';
-import JourneySection from './components/sections/JourneySection';
-import ContactSection from './components/sections/ContactSection';
-import StorySection from './components/sections/StorySection';
 import CulturePage from './pages/CulturePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
@@ -12,23 +5,11 @@ import ExperienceDetailPage from './pages/ExperienceDetailPage';
 import ExperiencePage from './pages/ExperiencePage';
 import GastronomyPage from './pages/GastronomyPage';
 
-function LandingPage() {
-  return (
-    <div className="bg-[#f5ebc7] text-[#4f602c]">
-      <Navbar />
-      <main className="bg-[repeating-linear-gradient(to_right,#F5EBC7_0px,#F5EBC7_120px,#F7EDCF_120px,#F7EDCF_156px)]">
-        <HeroSection />
-        <StorySection />
-        <ExperienceSection />
-        <JourneySection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
-  );
-}
-
 export default function App() {
+  if (window.location.pathname === '/') {
+    window.history.replaceState(null, '', '/about');
+  }
+
   if (window.location.pathname === '/about') {
     return <AboutPage />;
   }
@@ -69,5 +50,5 @@ export default function App() {
     return <ContactPage />;
   }
 
-  return <LandingPage />;
+  return <AboutPage />;
 }
