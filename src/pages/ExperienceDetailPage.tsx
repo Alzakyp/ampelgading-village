@@ -61,7 +61,7 @@ const detailDataMap: Record<DetailSlug, DetailData> = {
     showGallery: false,
   },
   'clove-distilation': {
-    title: 'Clove Distillation',
+    title: 'Clove Distilation',
     heroImage: cloveHeroImage1,
     decorationImage: cloveDecoration,
     description:

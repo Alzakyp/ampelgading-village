@@ -7,15 +7,6 @@ export default function ContactSection() {
   return (
     <section className="bg-[#F5EBC7] text-[#4F602C]">
       <div className="relative overflow-hidden">
-        <svg
-          aria-hidden="true"
-          className="pointer-events-none absolute left-0 top-8 z-0 hidden w-[65%] opacity-20 lg:block"
-          viewBox="0 0 1200 220"
-          fill="none"
-        >
-          <path d="M20 170C210 30 420 30 610 140C780 240 980 220 1180 60" stroke="#8F8D43" strokeWidth="2" />
-          <path d="M80 200C260 90 420 100 560 170" stroke="#8F8D43" strokeWidth="1.5" />
-        </svg>
 
         <Container className="relative z-10 py-20 md:py-24 lg:py-28">
           <div className="relative grid gap-10 lg:grid-cols-2 lg:items-center">
